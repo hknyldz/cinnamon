@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cinnamon-menus</Name>
+        <Homepage>http://cinnamon.linuxmint.com/</Homepage>
+        <Packager>
+            <Name>Hakan Yıldız</Name>
+            <Email>hknyldz93@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Cinnamon Menus</Summary>
+        <Description>Cinnamon menus library and its python bindings.</Description>
+        <Archive sha1sum="7fc12d12281ef67029c9e774c3df5fba25f1bed8" type="targz">https://github.com/linuxmint/cinnamon-menus/archive/2.4.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <RuntimeDependencies>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Name>cinnamon-menus</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libcinnamon-menu-3.so</Path>
+            <Path fileType="library">/usr/lib/libcinnamon-menu-3.so.0</Path>
+            <Path fileType="library">/usr/lib/libcinnamon-menu-3.so.0.0.1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cinnamon-menus-devel</Name>
+        <Summary>cinnamon-menus için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cinnamon-menus</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-03-06</Date>
+            <Version>2.4.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Hakan Yıldız</Name>
+            <Email>hknyldz93@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
