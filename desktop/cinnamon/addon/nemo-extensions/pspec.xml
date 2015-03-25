@@ -36,12 +36,18 @@
             <Dependency>libcanberra-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
             <Dependency>cinnamon-desktop-devel</Dependency>
+	    <Dependency>musicbrainz5-devel</Dependency>
+	    <Dependency>evince-devel</Dependency>
+	    <Dependency>gtksourceviewmm3-devel</Dependency>
+	    <Dependency>python-pygobject-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>nemo-extensions</Name>
         <RuntimeDependencies>
+	    <Dependency>python-pygobject</Dependency>
+	    <Dependency>gtksourceviewmm3</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>cups</Dependency>
@@ -63,20 +69,36 @@
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>cinnamon-desktop</Dependency>
             <Dependency>libcanberra-gtk3</Dependency>
+	    <Dependency>musicbrainz5</Dependency>
+	    <Dependency>evince</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="config">/etc/nemo-extensions/</Path>
-            <Path fileType="config">/etc/xdg/autostart/</Path>
-            <Path fileType="config">/etc/dbus-1/system.d</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/nemo-seahorse/ui/seahorse-progress.xml</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="data">/usr/share/nemo-extensions*</Path>
-            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/nemo-seahorse/ui/seahorse-multi-encrypt.xml</Path>
+            <Path fileType="data">/usr/share/nemo-seahorse/ui/seahorse-notify.xml</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/glib-2.0</Path>
-            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications/seahorse-pgp-signature.desktop</Path>
+            <Path fileType="data">/usr/share/applications/seahorse-pgp-keys.desktop</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/applications/seahorse-pgp-encrypted.desktop</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/dbus-1/services/org.nemo.Preview.service</Path>
+	    <Path fileType="data">/usr/share/nemo-preview/gir-1.0/NemoPreview-1.0.gir</Path>
+	    <Path fileType="data">/usr/share/nemo-preview/style/gtk-style.css</Path>
+	    <Path fileType="data">/usr/share/nemo-preview/js/viewers/*.js</Path>
+	    <Path fileType="data">/usr/share/nemo-preview/js/util/*.js</Path>
+	    <Path fileType="data">/usr/share/nemo-preview/js/ui/*.js</Path>
+	    <!--<Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>
+	    <Path fileType="data">/usr/share/nemo-share/interfaces/share-dialog.ui</Path>-->
         </Files>
     </Package>
 

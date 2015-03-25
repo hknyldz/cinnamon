@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libcryptui</Name>
+        <Homepage>http://git.gnome.org/browse/libcryptui/</Homepage>
+        <Packager>
+            <Name>Hakan Yıldız</Name>
+            <Email>hknyldz93@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Library for OpenPGP prompts</Summary>
+        <Description>Library for OpenPGP prompts.</Description>
+        <Archive sha1sum="8921ee7de4c232d64b4aa5305a19e2d1931b4f39" type="tarxz">https://git.gnome.org/browse/libcryptui/snapshot/libcryptui-3.12.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gpgme-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>dconf-devel</Dependency>            
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libcryptui</Name>
+        <RuntimeDependencies>
+            <Dependency>gpgme</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>dconf</Dependency>            
+            <Dependency>libgnome-keyring</Dependency>
+        </RuntimeDependencies>
+	<Files>
+            <Path fileType="header">/usr/include/libcryptui/cryptui-key-store.h</Path>
+            <Path fileType="header">/usr/include/libcryptui/cryptui.h</Path>
+            <Path fileType="header">/usr/include/libcryptui/cryptui-keyset.h</Path>
+            <Path fileType="header">/usr/include/libcryptui/cryptui-key-combo.h</Path>
+	    <Path fileType="header">/usr/include/libcryptui/cryptui-key-list.h</Path>
+            <Path fileType="header">/usr/include/libcryptui/cryptui-key-chooser.h</Path>
+            <Path fileType="library">/usr/lib/libcryptui.so.0</Path>
+            <Path fileType="library">/usr/lib/libcryptui.so</Path>
+            <Path fileType="library">/usr/lib/libcryptui.so.0.0.0</Path>
+	    <Path fileType="library">/usr/lib/girepository-1.0/CryptUI-0.0.typelib</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/cryptui-0.0.pc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="data">/usr/share/gir-1.0/</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="doc">/usr/share/libcinnamon-desktop</Path>
+	    <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/dbus-1/</Path>
+            <Path fileType="man">/usr/share/man/man1/seahorse-daemon.1</Path>
+	    <Path fileType="data">/usr/share/cryptui/</Path>
+	    <Path fileType="data">/usr/share/pixmaps/</Path>
+	    <Path fileType="data">/usr/share/GConf/</Path>
+            <Path fileType="doc">/usr/share/doc/libcryptui</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-03-06</Date>
+            <Version>3.12.2</Version>
+            <Comment>Firs release.</Comment>
+            <Name>Hakan Yıldız</Name>
+            <Email>hknyldz93@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
